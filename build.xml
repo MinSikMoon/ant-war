@@ -3,7 +3,7 @@
     <property name="src.dir" value="src"/>
     <property name="webapp.dir" value="${src.dir}/main/webapp"/>
     <property name="web-inf.dir" value="${webapp.dir}/WEB-INF"/>
-    <property name="lib.dir" value="lib"/>
+    <property name="lib.dir" value="../lib"/>
     <property name="target.dir" value="target"/>
     <property name="classes.dir" value="${target.dir}/classes"/>
     <property name="TITLE-PROJECT" value="antmvn"/>
