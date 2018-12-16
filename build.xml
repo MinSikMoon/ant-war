@@ -7,6 +7,9 @@
     <property name="target.dir" value="target"/>
     <property name="classes.dir" value="${target.dir}/classes"/>
     <property name="TITLE-PROJECT" value="antmvn"/>
+    <property name="tomcat-webapps" value="D:/javaide_new/servers/apache-tomcat-7.0.70/webapps"/>
+    <property name="jenkins-workspace" value="C:/Users/MinSik Moon/.jenkins/workspace"/>
+    
 
     <!-- 1. classpath를 지정한다. 라이브러리  폴더 위치 -->
     <path id="classpath">
@@ -29,5 +32,14 @@
             <zipfileset dir="${webapp.dir}/WEB-INF" prefix="WEB-INF/"/>
         </war>
     </target>
+    <!-- 5. war 복사해보기 -->
+    <target name="copy" depends="war">
+		<echo message="Copy ready" />
+		<copy todir="${tomcat-webapps}">
+			<fileset dir="${jenkins-workspace}/${TITLE-PROJECT}/target">
+				<include name="**/*.war" />
+			</fileset>			
+		</copy>			
+	</target>
 
 </project>
