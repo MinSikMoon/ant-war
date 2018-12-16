@@ -35,11 +35,12 @@
     <!-- 5. war 복사해보기 -->
     <target name="copy" depends="war">
 		<echo message="Copy ready" />
-		<copy todir="${tomcat-webapps}">
+        <copy file="${target.dir}/${TITLE-PROJECT}.war" todir="${tomcat-webapps}"/>
+		<!-- <copy todir="${tomcat-webapps}">
 			<fileset dir="${jenkins-workspace}">
 				<include name="**/${TITLE-PROJECT}.war" />
 			</fileset>			
-		</copy>			
+		</copy>			 -->
 	</target>
 
 </project>
