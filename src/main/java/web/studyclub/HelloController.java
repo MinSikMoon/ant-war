@@ -14,7 +14,7 @@ public class HelloController {
 
 	@RequestMapping("/hello.do")
 	public String hello(Model model) {
-		model.addAttribute("greeting", "안녕하세요");
+		model.addAttribute("greeting", "jenkins triggering을 위해 수정");
 		return "hello";
 	}
 
